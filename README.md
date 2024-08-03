@@ -1,4 +1,4 @@
-# Face-Recognition-based-Security-System
+# Face Recognition based Security System
 
 Welcome to the Diabetes prediction! This repository contains the source code and documentation for a diabetes prediction developed as part of a university project.
 
