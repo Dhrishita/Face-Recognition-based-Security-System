@@ -9,6 +9,7 @@ Welcome to the Diabetes prediction! This repository contains the source code and
 - [Components](#components)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Code Structure](#codestructure)
 - [Contact](#contact)
 
 ## Introduction
@@ -35,36 +36,32 @@ This project is a face recognition based security system implemented using a Ras
 ## Installation
 ## Hardware Setup
 
-
-To get started with the project, follow these steps:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Dhrishita/diabetes-prediction.git
-   cd diabetes-prediction
-
-2. Create a virtual environment and activate it:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate   # On Windows, use `venv\Scripts\activate`
-
-3. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
-
+1. Connect the camera module to the Raspberry Pi.
+2. Connect the LED indicator to the GPIO pins on the Raspberry Pi.
+    ```bash
+    sudo apt-get update
+    sudo apt-get install python3-pip
+    pip3 install opencv-python
+    pip3 install flask
+    pip3 install smtplib
+    
 ## Usage
-Once the chatbot is running, you can interact with it via the command line or a web interface. Simply type your questions or statements and the chatbot will respond accordingly.
+1. Clone this repository to your Raspberry Pi:
+   ```bash
+   git clone https://github.com/your-username/face-recognition-security-system.git
+   cd face-recognition-security-system
+   
+2. Run the Python script:
+   ```bash
+   python3 main.py
 
-1. Prepare your dataset and place it in the data/ directory.
-2. Train the model:
-   ```bash
-   python train_model.py
-3. Evaluate the model:
-   ```bash
-   python evaluate_model.py
-4. Use the model to make predictions:
-   ```bash
-   python predict.py
+3. The system will start and wait for someone to stand in front of the camera. If the face is recognized, access will be granted. If the face is not recognized, an email with an OTP and the photo of the individual will be sent to the owner's email.
+
+## Code Structure
+- 'main.py': The main script to run the face recognition system.
+- 'face_recognition.py': Contains the face recognition logic using OpenCV.
+- 'email_notification.py': Handles sending email notifications for unrecognized faces.
+- 'utils.py': Utility functions for the system.
 
 ## Contact
 If you have any questions or suggestions, feel free to open an issue or contact:
