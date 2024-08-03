@@ -38,6 +38,7 @@ This project is a face recognition based security system implemented using a Ras
 
 1. Connect the camera module to the Raspberry Pi.
 2. Connect the LED indicator to the GPIO pins on the Raspberry Pi.
+   
     ```bash
     sudo apt-get update
     sudo apt-get install python3-pip
@@ -47,15 +48,17 @@ This project is a face recognition based security system implemented using a Ras
     
 ## Usage
 1. Clone this repository to your Raspberry Pi:
+   
    ```bash
    git clone https://github.com/your-username/face-recognition-security-system.git
    cd face-recognition-security-system
    
-2. Run the Python script:
+3. Run the Python script:
+   
    ```bash
    python3 main.py
 
-3. The system will start and wait for someone to stand in front of the camera. If the face is recognized, access will be granted. If the face is not recognized, an email with an OTP and the photo of the individual will be sent to the owner's email.
+5. The system will start and wait for someone to stand in front of the camera. If the face is recognized, access will be granted. If the face is not recognized, an email with an OTP and the photo of the individual will be sent to the owner's email.
 
 ## Code Structure
 - 'main.py': The main script to run the face recognition system.
