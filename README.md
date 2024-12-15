@@ -10,6 +10,7 @@ Welcome to the Security System! This repository contains the source code and doc
 - [Installation](#installation)
 - [Usage](#usage)
 - [Code Structure](#codestructure)
+- [Demo](#demo)
 - [Contact](#contact)
 
 ## Introduction
@@ -25,9 +26,13 @@ This project is a face recognition based security system implemented using a Ras
 - Easy to configure and use
 
 ## Components
-- Raspberry Pi 3 Model B
-- Camera module
+- Raspberry Pi 4
+- Web Cam
+- Switch (as Door bell)
 - LED indicator
+- Keypad
+- Breadboard
+- Jumper wires
 - Python programming language
 - OpenCV library
 - Flask framework
@@ -65,6 +70,11 @@ This project is a face recognition based security system implemented using a Ras
 - 'face_recognition.py': Contains the face recognition logic using OpenCV.
 - 'email_notification.py': Handles sending email notifications for unrecognized faces.
 - 'utils.py': Utility functions for the system.
+
+## Demo
+
+https://github.com/user-attachments/assets/6b759b6c-ebb1-4930-8339-d4f1130d72b4
+
 
 ## Contact
 If you have any questions or suggestions, feel free to open an issue or contact:
