@@ -55,7 +55,7 @@ This project is a face recognition based security system implemented using a Ras
 1. Clone this repository to your Raspberry Pi:
    
    ```bash
-   git clone https://github.com/your-username/face-recognition-security-system.git
+   git clone https://github.com/Dhrishita/face-recognition-security-system.git
    cd face-recognition-security-system
    
 3. Run the Python script:
