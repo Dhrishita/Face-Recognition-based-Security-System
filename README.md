@@ -1,6 +1,6 @@
 # Face Recognition based Security System
 
-Welcome to the Security System! This repository contains the source code and documentation for a security system developed as part of a university project.
+Welcome to the Security System! This repository contains the source code and documentation for a security system developed as part of a Minor Project.
 
 ## Table of Contents
 
