@@ -6,7 +6,7 @@ Welcome to the Security System! This repository contains the source code and doc
 
 - [Introduction](#introduction)
 - [Features](#features)
-- [Components](#components)
+- [Components Required](#components-required)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Code Structure](#code-structure)
