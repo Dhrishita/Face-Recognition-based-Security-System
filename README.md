@@ -10,6 +10,7 @@ Welcome to the Security System! This repository contains the source code and doc
 - [Installation](#installation)
 - [Usage](#usage)
 - [Code Structure](#code-structure)
+- [Woking of the Project](#working-of-the-project)
 - [Demo](#demo)
 - [Contact](#contact)
 
@@ -25,7 +26,7 @@ This project is a face recognition based security system implemented using a Ras
 - Backup security with a 4-digit PIN code
 - Easy to configure and use
 
-## Components
+## Components Required
 - Raspberry Pi 4
 - Web Cam
 - Switch (as Door bell)
@@ -71,10 +72,49 @@ This project is a face recognition based security system implemented using a Ras
 - 'email_notification.py': Handles sending email notifications for unrecognized faces.
 - 'utils.py': Utility functions for the system.
 
+## Working of the Project
+
+1. **Startup and Initialization**:
+   - The Raspberry Pi initializes the hardware, including the camera module, keypad, and LED indicator.
+   - Necessary Python libraries like OpenCV, Flask, and smtplib are loaded.
+
+2. **Face Detection**:
+   - The camera continuously monitors the area in front of the door.
+   - Using OpenCV’s Haar cascades or DNN-based face detection, the system detects faces in the live video feed.
+
+3. **Face Recognition**:
+   - Detected faces are compared with the system’s database of pre-stored authorized individuals using a face recognition model (e.g., HOG-based, CNN, or DLIB library).
+   - If the face matches an authorized individual, the system grants access:
+     - The LED indicator glows green.
+     - A signal is sent to unlock the door (using a connected relay module).
+
+4. **Handling Unrecognized Faces**:
+   - If the face is not recognized, the system performs the following actions:
+     - Captures a photo of the unrecognized individual.
+     - Generates a One-Time Password (OTP) and sends an email to the owner using the `smtplib` library.
+     - The email includes:
+       - The photo of the unrecognized individual.
+       - A message prompting for OTP verification.
+
+5. **Backup PIN Access**:
+   - A keypad is available as a backup method to unlock the door.
+   - The owner (or authorized individuals) can enter a pre-configured 4-digit PIN code.
+   - If the PIN is correct, the system grants access.
+
+6. **Security Layer for OTP**:
+   - The owner can use the OTP received via email to manually verify and grant access if needed.
+   - If the OTP is entered correctly on the keypad, the system unlocks the door.
+
+7. **Notification**:
+   - The system logs all access attempts, including timestamps and face recognition results.
+   - Owners can review these logs for security purposes.
+
+8. **Flask Framework for Remote Monitoring**:
+   - The system includes a web interface (using Flask) that allows the owner to remotely view live camera feeds and manage access logs.
+
 ## Demo
 
 https://github.com/user-attachments/assets/6b759b6c-ebb1-4930-8339-d4f1130d72b4
-
 
 ## Contact
 If you have any questions or suggestions, feel free to open an issue or contact:
